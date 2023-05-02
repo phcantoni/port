@@ -1,0 +1,676 @@
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@200&family=Playfair+Display:ital@1&family=Roboto+Slab&display=swap");
+
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+/* ------------------------------------------------------- */
+
+.App {
+  display: flex;
+  background-color: rgb(32, 32, 32);
+}
+
+/* ------------------------------------------------------- */
+
+.NavBar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: fixed;
+  width: 10.3vw;
+  height: 100vh;
+  font-family: "Roboto", sans-serif;
+  color: white;
+  background-color: rgb(15, 15, 15);
+}
+.NavBar figure:first-child img {
+  width: 10vw;
+}
+.NavBar h3 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 10vw;
+  height: 7.5vh;
+  font-family: "Roboto Slab", serif;
+  font-size: 1.7em;
+}
+.NavBar p {
+  display: flex;
+  justify-content: center;
+  width: 10vw;
+  height: 7vh;
+  font-size: 0.7em;
+  border-bottom: gray solid 0.1px;
+}
+.NavBar ul {
+  height: 45vh;
+}
+.NavBar li {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 10vw;
+  height: 8vh;
+  font-weight: 100;
+  opacity: 0.4;
+}
+.NavBar li:hover {
+  cursor: pointer;
+  color: aqua;
+  border-bottom: aqua solid 1px;
+  background-color: rgba(128, 128, 128, 0.102);
+  opacity: 1;
+  transition: 0.6s;
+}
+.NavBar li:hover a {
+  color: aqua;
+  opacity: 1;
+  text-decoration: none;
+}
+.NavBar a {
+  color: white;
+  text-decoration: none;
+}
+.NavBar figure:last-child {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 2em;
+  height: 2em;
+  background-color: white;
+  border-radius: 50%;
+}
+.NavBar figure:hover {
+  cursor: pointer;
+  background-color: aqua;
+  transform: scale(1.05);
+  transition: 1s;
+}
+
+/* ------------------------------------------------------- */
+
+.Main {
+  position: relative;
+  left: 10vw;
+  overflow: hidden;
+}
+
+/* ------------------------------------------------------- */
+
+.Home {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 88.7vw;
+  height: 100vh;
+}
+.Home h1 {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 80vw;
+  height: 35vh;
+  font-family: "Roboto", sans-serif;
+  font-size: 7em;
+  line-height: 0.9em;
+  color: white;
+}
+.Home h1::before {
+  content: '';
+  position: absolute;
+  right: -1em;
+  width: 80vw;
+  height: 0.1px;
+  rotate: 30deg;
+  z-index: -1;
+  margin-bottom: 36em;
+  border: aqua solid 1px;
+}
+.Home div {
+  width: 80vw;
+  height: 30vh;
+}
+.Home div div::after {
+  content: '';
+  position: absolute;
+  right: -25em;
+  rotate: 50deg;
+  width: 50vw;
+  height: 100vh;
+  z-index: -1;
+  margin-top: 0.60em;
+  border: aqua solid 1px;
+}
+.Home p {
+  width: 24vw;
+  font-family: "Playfair Display", serif;
+  font-size: 2em;
+  color: white;
+  opacity: 0.5;
+  padding-left: 0.5em;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: white solid 2px;
+}
+
+.animationHome {
+  animation: blinkCursor 500ms steps(30) infinite normal, typingHome 5s steps(30) 1s normal;
+}
+
+@keyframes typingHome {
+  from {
+    width: 0vw;
+  }
+  to {
+    width: 24vw;
+  }
+}
+
+@keyframes blinkCursor {
+  from {
+    border-right-color: white;
+  }
+  to {
+    border-right-color: transparent;
+  }
+}
+
+.Home button {
+  width: 15vw;
+  height: 9vh;
+  font-size: 1.2em;
+  font-weight: thin;
+  font-family: "IBM Plex Mono", monospace;
+  color: aqua;
+  border: aqua solid 1px;
+  background: linear-gradient(
+      to left,
+      rgba(0, 0, 0, 0) 50%,
+      aqua 50%
+    )
+    right;
+  background-size: 200%;
+  transition: 0.5s;
+}
+.Home button:hover {
+  cursor: pointer;
+  color: black;
+  background-position: left;
+  transition: 0.8s;
+}
+
+/* ------------------------------------------------------- */
+
+.Projects {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  justify-content: center;
+  align-items: center;
+  width: 88.7vw;
+  height: 100vh;
+}
+.Projects h2 {
+  width: 80vw;
+  height: 20vh;
+  font-family: "Roboto Slab", serif;
+  font-size: 5em;
+  color: white;
+}
+.Projects p {
+  width: 80vw;
+  height: 20vh;
+  font-family: "Roboto Slab", serif;
+  font-size: 1.5em;
+  padding-right: 10em;
+  color: white;
+}
+.Projects section {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 85vw;
+  height: 50vh;
+}
+.Projects figure {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 25vw;
+  height: 35vh;
+  background-size: cover;
+  background-position: center;
+  border: white solid 1px;
+}
+/* .Projects figure:hover {
+  cursor: pointer;
+  transform: scale(1.04);
+  transition: 0.6s;
+  opacity: 1;
+  border: aqua solid 1px;
+} */
+.projectsFigureDiv {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 1vw;
+  height: 1vh;
+  background-color: rgba(128, 128, 128, 0.925);
+  opacity: 0;
+  overflow: hidden;
+}
+.Projects figure:hover .projectsFigureDiv{
+  width: 25vw;
+  height: 35vh;
+  transform: scale(1.07);
+  opacity: 1;
+  transition: 0.8s;
+  border: aqua solid 1px;
+}
+.projectsFigureDiv p {
+  width: 20vw;
+  height: 15vh;
+  font-family: "Roboto", sans-serif;
+  font-size: 2em;
+  font-weight: 900;
+  color: white;
+  line-height: 1em;
+  padding-right: 2.9em;
+}
+.projectsFigureDiv p::before {
+  content: '';
+  position: absolute;
+  top: 0.4em;
+  left: 0.53em;
+  width: 3vw;
+  height: 6vh;
+  border-left: aqua solid 1px;
+  border-top: aqua solid 1px;
+}
+.projectsFigureDiv div {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  width: 20vw;
+  height: 12vh;
+  padding: 0;
+}
+.projectsFigureDiv div button {
+  position: unset;
+  width: 9.5vw;
+  height: 6vh;
+  font-family: "Roboto", sans-serif;
+  font-size: 1em;
+  font-weight: 700;
+  color: white;
+  background-color: rgb(99, 99, 99);
+  border: rgb(80, 80, 80) solid 2px;
+}
+.projectsFigureDiv div a:last-of-type::after {
+  content: '';
+  position: absolute;
+  right: 1.1em;
+  bottom: 1em;
+  width: 3vw;
+  height: 6vh;
+  border-right: aqua solid 1px;
+  border-bottom: aqua solid 1px;
+}
+.projectsFigureDiv div button:hover {
+  cursor: pointer;
+  transform: scale(1.05);
+  transition: 0.5s;
+}
+.projectsFigureDiv div a {
+  color: white;
+  text-decoration: none;
+}
+.Projects h3 {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  height: 5vh;
+  font-family: "Roboto Slab", serif;
+  font-size: 1em;
+  font-weight: thin;
+  color: white;
+}
+.Projects button {
+  position: fixed;
+  right: 0.5em;
+  bottom: 1em;
+  background-color: transparent;
+  border: none;
+}
+.Projects button img {
+  width: 2.5vw;
+  height: 5vh;
+  border-radius: 50%;
+  /* border: blue solid; */
+}
+.Projects button img:hover {
+  cursor: pointer;
+  border: aqua solid 1px;
+}
+
+/* ------------------------------------------------------- */
+
+.Skills {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 88.7vw;
+  height: 100vh;
+}
+.Skills h2 {
+  width: 80vw;
+  height: 25vh;
+  font-family: "Roboto Slab", serif;
+  font-size: 5em;
+  color: white;
+}
+.Skills div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 65vw;
+  /* border: red solid; */
+}
+.Skills section {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 35vw;
+  height: 50vh;
+  z-index: 2;
+  background-color: rgb(32, 32, 32);
+}
+.Skills section::before {
+  content: '';
+  position: absolute;
+  left: -21em;
+  width: 40vw;
+  height: 80vh;
+  rotate: 52deg;
+  margin-top: 16em;
+  border: aqua solid 1px;
+}
+.Skills figure {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 10vw;
+  height: 20vh;
+  background-color: rgb(32, 32, 32);
+  z-index: 1;
+  border: aqua solid 1px;
+}
+.Skills figure:hover {
+  cursor: pointer;
+  transform: scale(1.04);
+}
+.Skills img {
+  width: 7.5vw;
+  height: 15vh;
+}
+.Skills p {
+  display: flex;
+  align-items: center;
+  width: 20vw;
+  height: 40vh;
+  font-family: "Roboto Slab", serif;
+  font-size: 1.5em;
+  color: white;
+  padding-left: 1em;
+  border-top: aqua solid 1px;
+  border-bottom: aqua solid 1px;
+}
+
+/* ------------------------------------------------------- */
+
+.About {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 88.7vw;
+  height: 100vh;
+}
+.About section {
+  width: 58vw;
+  height: 50vh;
+}
+.About h2 {
+  width: 50vw;
+  height: 25vh;
+  font-family: "Roboto Slab", serif;
+  font-size: 5em;
+  /* background-color: rgb(32, 32, 32); */
+  color: white;
+}
+.About p {
+  width: 50vw;
+  height: 25vh;
+  font-family: "Roboto Slab", serif;
+  font-size: 1.5em;
+  color: white;
+}
+.About figure {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 22vw;
+  height: 45vh;
+  border-radius: 50%;
+}
+.About figure::before {
+  content: '';
+  position: absolute;
+  right: -20em;
+  width: 40vw;
+  height: 120vh;
+  rotate: 35deg;
+  margin-top: 13em;
+  border: aqua solid 1px;
+}
+.About img {
+  width: 22vw;
+  height: 45vh;
+  border-radius: 50%;
+  border: aqua solid 5px;
+}
+.About img:hover {
+  cursor: pointer;
+  transform: scale(1.05);
+  transition: 0.4s;
+}
+.figureAbout img {
+  position: relative;
+  animation-iteration-count: infinite;
+  animation-duration: 3s;
+  animation-name: upAndDown;
+}
+ @keyframes upAndDown {
+    0%, 10%, 100% {
+    margin-top: 0
+  }
+
+  30%, 50% {
+    margin-top: 3.5em
+  }
+}
+
+/* ------------------------------------------------------- */
+
+.Contact {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 88.7vw;
+  height: 100vh;
+}
+.Contact h2 {
+  width: 80vw;
+  height: 19vh;
+  font-family: "Roboto Slab", serif;
+  font-size: 5em;
+  color: white;
+}
+.Contact p {
+  width: 80vw;
+  height: 15vh;
+  font-family: "Roboto Slab", serif;
+  font-size: 1.5em;
+  color: white;
+  padding-right: 3em;
+}
+.Contact form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-end;
+  width: 39vw;
+  height: 60vh;
+}
+.Contact div {
+  display: flex;
+  justify-content: space-between;
+  width: 39vw;
+}
+.Contact div:last-child {
+  display: flex;
+  justify-content: space-between;
+  width: 80vw;
+  height: 60vh;
+}
+.Contact input {
+  width: 39vw;
+  height: 10vh;
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 1.5em;
+  color: white;
+  background-color: rgba(80, 80, 80, 0.705);
+  padding-left: 1em;
+  border: gray solid 1px;
+}
+.Contact input:hover {
+  border: aqua solid 1px;
+}
+.Contact div div input {
+  width: 19.3vw;
+  height: 10vh;
+  border: gray solid 1px;
+}
+.Contact textarea {
+  width: 39vw;
+  height: 27.5vh;
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 1.5em;
+  color: white;
+  background-color: rgba(80, 80, 80, 0.705);
+  padding: 0.5em 0 0 1em;
+}
+.Contact textarea:hover {
+  border: aqua solid 1px;
+}
+.Contact iframe {
+  width: 39vw;
+  height: 60vh;
+}
+.Contact iframe:hover {
+  border: aqua solid 1px;
+}
+.Contact button {  
+  width: 15vw;
+  height: 9vh;
+  font-size: 1.2em;
+  font-weight: thin;
+  font-family: "IBM Plex Mono", monospace;
+  color: aqua;
+  background: linear-gradient(
+      to left,
+      rgba(0, 0, 0, 0) 50%,
+      aqua 50%
+    )
+    right;
+  background-size: 200%;
+  transition: 0.5s;
+  border: aqua solid 1px;
+}
+.Contact button:hover {
+  cursor: pointer;
+  color: black;
+  background-position: left;
+  transition: 0.8s;
+}
+
+/* ------------------------------------------------------- */
+
+.Footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  height: 30vh;
+}
+.Footer h3 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 80vw;
+  height: 10vh;
+  font-family: "Roboto", sans-serif;
+  font-size: 1em;
+  color: white;
+  border-top: white solid 1px;
+  border-bottom: white solid 1px;
+}
+.Footer ul {
+  display: flex;
+  justify-content: space-evenly;
+  width: 70vw;
+  height: 13vh;
+}
+.Footer li {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  color: darkgray;
+  padding-left: 1em;
+}
+.Footer li:hover {
+  cursor: pointer;
+  color: aqua;
+  transition: 0.6s;
+}
+.Footer img {
+  width: 3vw;
+  height: 6vh;
+  margin-right: 1em;
+  background-color: rgba(80, 80, 80, 0.993);
+  border-radius: 50%;
+  border: rgb(63, 63, 63) solid 1px;
+}
+.Footer li:hover img {
+  cursor: pointer;
+  background-color: aqua;
+  transition: 0.6s;
+}
+
+/* -------------------------------------------------------------------- */
+
+/* SCROLL EFFECT */
+.Projects, .Skills, .About, .Contact {
+  visibility: hidden;
+}
+
+/* -------------------------------------------------------------------------- */
