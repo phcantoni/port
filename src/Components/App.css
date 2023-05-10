@@ -148,7 +148,7 @@
   border: aqua solid 1px;
 }
 .Home p {
-  width: 24vw;
+  width: 26.5vw;
   font-family: "Playfair Display", serif;
   font-size: 2em;
   color: white;
@@ -168,7 +168,7 @@
     width: 0vw;
   }
   to {
-    width: 24vw;
+    width: 26.5vw;
   }
 }
 
@@ -589,7 +589,7 @@
 .Contact iframe:hover {
   border: aqua solid 1px;
 }
-.Contact button {  
+.Contact input:nth-child(4) {  
   width: 15vw;
   height: 9vh;
   font-size: 1.2em;
@@ -606,7 +606,7 @@
   transition: 0.5s;
   border: aqua solid 1px;
 }
-.Contact button:hover {
+.Contact input:nth-child(4):hover {
   cursor: pointer;
   color: black;
   background-position: left;

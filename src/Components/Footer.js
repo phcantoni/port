@@ -8,7 +8,7 @@ export default function Footer () {
             <h3>Portifólio produzido por Paulo Henrique de Albergaria Cantoni</h3>
             <nav>
                 <ul>
-                    <li><img src={email} alt="*"></img>phacantoni@gmail.com</li>
+                    <li><img src={email} alt="*"></img>devphcantoni@gmail.com</li>
                     <li><img src={telefone} alt="*"></img>21 98393-6221</li>
                     <li><img src={local} alt="*"></img>Rua Almirante Alexandrino, 3056 - Santa Teresa - RJ</li>
                 </ul>
